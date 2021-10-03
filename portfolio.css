@@ -1,6 +1,6 @@
 #body{
     width: 95%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(50, 51, 51);
     margin: 0 auto;
@@ -8,7 +8,7 @@
 
 .mainNavDiv{
     height: 15%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,7 +17,9 @@
 ul{
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 30%;
+    justify-content: flex-end;
+    /* border: 1px solid pink; */
 }
 
 li{
@@ -28,14 +30,17 @@ li{
     list-style-type: none;
     align-items: center;
     justify-content: space-evenly;
-    padding: 15px;
+    padding: 7px;
+    text-align: right;
 }
 
 #brand{
     width: 70%;
-    text-align: center;
+    /* text-align: center; */
     font-size: 50px;
     color: yellowgreen;
+    padding-left: 7px;
+    font-weight: 400;
 }
 
 a:link{
@@ -48,9 +53,34 @@ a:visited{
 }
 
 .mainContentArea{
-    border: 10px solid orange;
-    padding: 10px;
-    height: 80%;
+    /* border: 10px solid orange; */
+    /* padding: 10px; */
+    height: auto;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    margin: 0 auto;
+
+}
+.cardContainer{
+    display:flex;
     flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 31%;
+    height: auto;
+    padding: 7px;
+    margin: 0px;
+    /* border: 3px solid blue; */
+    color:white;
+    font-size: 10px;
+    text-align: center;
+}
+.imgSqContainer{
+    /* flex-direction: column; */
+    /* width: 100%; */
+    /* border: 1px solid green; */
+    /* background-color: white; */
+
 }
