@@ -133,6 +133,7 @@ function myFunc(){
     loadMainContent();
     loadFooterNav();
 
+    document.body.appendChild(createDomElement('input',{type:'password', style:'border:1px solid red', cssClass: 'input', cssId: 'password'}));
 }
 window.onload = myFunc;
 
