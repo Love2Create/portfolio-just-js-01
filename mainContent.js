@@ -7,10 +7,6 @@ function loadMainContent(){
 
     function loadCards(){  
 
-        //cardObj
-
-
-
         for (var i=0; i<cardObj.length; i++){
             var cardClassNames = cardObj[i].cardClassName;
             var imgClassNames = cardObj[i].imgClassName;
@@ -37,13 +33,27 @@ function loadMainContent(){
         }  
         
     }
+
+        
     loadCards();
 
-
-    for(var i=1; i<cardObj.length+1; i++){
-        document.getElementById(i).addEventListener('click', function(e){
-        document.querySelector('.mainContentArea').innerHTML = e.target.id;
-        console.log(e.target.id);
+    for(var j=1; j<cardObj.length+1; j++){
+        document.getElementById(j).addEventListener('click', function(e){
+            var targetIndex = e.target.id-1;
+            mainContentArea.innerHTML = '';
+            for(var i=0; i<indPieceObj[targetIndex].length; i++){
+                console.log(indPieceObj[targetIndex][i]);
+                if(indPieceObj[targetIndex][i].type == 'h1'){
+                     var newTitle = mainContentArea.appendChild(createDomElement(indPieceObj[targetIndex][i].type));
+                     newTitle.setAttribute('class',indPieceObj[targetIndex][i].textClass);
+                     newTitle.textContent = indPieceObj[targetIndex][i].copy;
+                }
+                if(indPieceObj[targetIndex][i].type == 'img'){
+                     var newImg = mainContentArea.appendChild(createDomElement(indPieceObj[targetIndex][i].type));
+                     newImg.setAttribute('class', indPieceObj[targetIndex][i].imgClass);
+                     newImg.setAttribute('src', indPieceObj[targetIndex][i].imgSrc);
+                }
+            }     
         });
     }
 }
