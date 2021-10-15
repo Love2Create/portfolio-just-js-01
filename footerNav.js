@@ -7,6 +7,7 @@ function loadFooterNav(){
     function loadIconCard(){
         for(var i=0; i<cardObj.length; i++){
             var iconCardContainer = document.createElement('div');
+            iconCardContainer.setAttribute('id',cardObj[i].id);
             iconCardContainer.setAttribute('class','iconCardContainer');
             footerNavContainer.appendChild(iconCardContainer);
 
@@ -22,4 +23,5 @@ function loadFooterNav(){
         }
     }
     loadIconCard();
+
 }
