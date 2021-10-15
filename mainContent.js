@@ -58,7 +58,7 @@ function loadMainContent(){
             } 
             
             var removeFromFootNav = document.getElementById(targetIndex+1);
-            console.log(removeFromFootNav);
+            // console.log(removeFromFootNav);
             removeFromFootNav.remove();   
 
         });
