@@ -2,29 +2,23 @@ function addNavLinks(){
     var linkObj = [
         {
         name:'Home',
-        linkTo:'http://www.google.com'
+        id: 'home'
         },
         {name:'About',
-        linkTo:'http://www.yahoo.com'
+        id: 'about'
         },
         {name:'Contact',
-        linkTo:'http://www.yahoo.com'
+        id: 'contact'
         },
     ]
     // console.log(linkObj);
 
     for (var i=0; i<linkObj.length; i++){
-        // var portLink = linkObj[i].linkTo;
-        // var portLinkName = linkObj[i].Name;
-
-        var portLink = document.createElement('a');
-        portLink.setAttribute('href', linkObj[i].linkTo);
-    
-        var portLinkName = document.createElement('li');
+        var portLink = document.createElement('h2');
         portLink.textContent = linkObj[i].name;
-
-        mainNavUl.appendChild(portLink)
-        mainNavUl.appendChild(portLinkName);
+        portLink.setAttribute('id', linkObj[i].id);
+        portLink.setAttribute('href', linkObj[i].linkTo);
+        mainNavDiv.appendChild(portLink);
     }
-    
+
 }
