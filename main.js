@@ -101,7 +101,7 @@ indPieceObj = [
         },
         {type:'p', 
         textClass:'para2', 
-        copy:'DResponsibilities: Design'
+        copy:'Responsibilities: Design'
         },
         {type:'p', 
         textClass:'para3', 
@@ -115,11 +115,39 @@ indPieceObj = [
     [
         {type:'h1', 
         textClass:'header', 
-        copy:'DETROIT RED WINGS WALLPAPERS'
+        copy:'DETROIT TIGERS SPRING TRAINING - COUNTDOWN GRAPHICS'
         },
         {type:'img', 
         imgClass:'image', 
-        imgSrc:'https://images.squarespace-cdn.com/content/v1/5de91a6a40de837e3d0f7afe/1622074420814-N7694HZ2JBL642C0ORSH/Icons_SquareDRWwallpaper_02.jpg?format=500w'
+        imgSrc:'https://images.squarespace-cdn.com/content/v1/5de91a6a40de837e3d0f7afe/1613438162912-XPHU3M4SZDN2LZFFQ0AG/8285_VL_SpringTraining_CountdownGraphics_1Day.jpg?format=1000'
+        },
+        {type:'img', 
+        imgClass:'image2', 
+        imgSrc:'https://images.squarespace-cdn.com/content/v1/5de91a6a40de837e3d0f7afe/1613700508815-1H2Z5QSPM49BCPBE02ON/8285_VL_SpringTraining_CountdownGraphics_2Days.jpg?format=500w'
+        },
+        {type:'img', 
+        imgClass:'image3', 
+        imgSrc:'https://images.squarespace-cdn.com/content/v1/5de91a6a40de837e3d0f7afe/1613700508460-LAL3OLD03AG3VNYDX8L2/8285_VL_SpringTraining_CountdownGraphics_3Days.jpg?format=500w'
+        },
+        {type:'img', 
+        imgClass:'image4', 
+        imgSrc:'https://images.squarespace-cdn.com/content/v1/5de91a6a40de837e3d0f7afe/1613700515157-YTT4YQ06UYQ705KN9U1F/8285_VL_SpringTraining_CountdownGraphics_4Days.jpg?format=500w'
+        },
+        {type:'img', 
+        imgClass:'image5', 
+        imgSrc:'https://images.squarespace-cdn.com/content/v1/5de91a6a40de837e3d0f7afe/1613700515475-EQ7YPOM760NKBID8S2J0/8285_VL_SpringTraining_CountdownGraphics_5Days.jpg?format=500w'
+        },
+        {type:'p',
+        textClass:'para1', 
+        copy:'DETROIT RED WINGS WALLPAPERS'
+        },
+        {type:'p', 
+        textClass:'para2', 
+        copy:'Responsibilities: Design'
+        },
+        {type:'p', 
+        textClass:'para3', 
+        copy:'Credits: Greg Garno, Elizabeth Kaiser'
         },
     ]
 ]
@@ -149,6 +177,52 @@ aboutObj = [
     attr: {class: 'aboutp'},
     copy:"The two times I splintered from my art career, however, have impacted me as an artist, far more than I could have ever imagined. The first time, I went back to school for American Sign Language to help my Deaf cousin to adjust to Michigan life. She and her family moved to Michigan from New York and when the time came for her to get a driver's license, she could not get a translater. I saw it as an opportunity to help my cousin and learn a new language. And now she is an excellent driver. The second time, I held a part-time position moderating a Chinese online community for a consumer research company. After having these two adventures, I have found my work has become more inclusive and my design strategy more pragmatic. ",
     },
+]
+
+contactObj = [
+    [
+        {type:'label',
+        attr:{for:'firstName'},
+        text: 'First Name'
+        },
+        {type:'input',
+        attr:{type:'text', name:'firstName', id:'First Name'}
+        },
+        {type:'label',
+        attr:{for:'lastName'},
+        text: 'Last Name'
+        },
+        {type:'input',
+        attr:{type:'text', name:'lastName', id:'lastName'}
+        }
+    ],
+    [
+        {type:'label',
+        attr:{for:'email'},
+        text:'Email'
+        },
+        {type:'input',
+        attr:{type:'email', name:'email', id:'email'}
+        }
+    ],
+    [
+        {type:'label',
+        attr:{for:'subject'},
+        text:'Subject'
+        },
+        {type:'input',
+        attr:{type:'text', name:'subject', id:'subject'}
+        }
+    ],
+    [
+        {type:'label',
+        attr:{for:'message'},
+        text:'Message'
+        },
+        {type:'input',
+        attr:{type:'text', name:'subject', id:'message'}
+        }
+    ],
 ]
 
 function myFunc(){
@@ -208,10 +282,16 @@ function myFunc(){
         // console.log(e);
         document.querySelector('.mainContentArea').innerHTML = '';
         loadAbout();
+    });
 
-    })
+    document.querySelector('#contact').addEventListener('click', function(){
+        document.querySelector('.mainContentArea').innerHTML='';
+        renderForm();
+        document.querySelector('.footerNavContainer').remove();
+    });
 
 }
 window.onload = myFunc;
+
 
 
